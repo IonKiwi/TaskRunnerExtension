@@ -20,8 +20,8 @@ namespace TaskRunnerExtension.OutputFormatting {
 		[Name("output.term.colorcode")]
 		internal sealed class OutputTermColorCodeFormat : ClassificationFormatDefinition {
 			public OutputTermColorCodeFormat() {
-				ForegroundColor = Colors.Black;
-				BackgroundColor = Colors.Black;
+				ForegroundColor = Colors.Transparent;
+				//BackgroundColor = Colors.Black;
 			}
 		}
 	}

@@ -41,7 +41,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 				int c1 = 0, c2, c3;
 				IClassificationType fgType = _classificationTypeRegistry.GetClassificationType("output.term.color15");
-				IClassificationType bgType = _classificationTypeRegistry.GetClassificationType("output.term.bgcolor00");
+				IClassificationType bgType = null; // _classificationTypeRegistry.GetClassificationType("output.term.bgcolor00");
 
 				c1 = text.IndexOf("\u001b["); // '\x001b'
 				if (c1 >= 0) {
@@ -163,14 +163,18 @@ namespace TaskRunnerExtension.OutputFormatting {
 					if (c2 >= 0) {
 						if (c2 - c3 >= 0) {
 							spans.Add(new ClassificationSpan(new SnapshotSpan(line.Extent.Start + c3, c2 - c3), fgType));
-							spans.Add(new ClassificationSpan(new SnapshotSpan(line.Extent.Start + c3, c2 - c3), bgType));
+							if (bgType != null) {
+								spans.Add(new ClassificationSpan(new SnapshotSpan(line.Extent.Start + c3, c2 - c3), bgType));
+							}
 						}
 						c1 = c2;
 						goto handleMarker;
 					}
 					else if (text.Length - c3 > 0) {
 						spans.Add(new ClassificationSpan(new SnapshotSpan(line.Extent.Start + c3, text.Length - c3), fgType));
-						spans.Add(new ClassificationSpan(new SnapshotSpan(line.Extent.Start + c3, text.Length - c3), bgType));
+						if (bgType != null) {
+							spans.Add(new ClassificationSpan(new SnapshotSpan(line.Extent.Start + c3, text.Length - c3), bgType));
+						}
 					}
 					//spans.Add(new ClassificationSpan(line.Extent, t));
 				}
