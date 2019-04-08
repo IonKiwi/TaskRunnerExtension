@@ -69,6 +69,7 @@ namespace TaskRunnerExtension {
 		}
 
 		#region ITableEntriesSnapshotFactory members
+
 		public override int CurrentVersionNumber {
 			get {
 				return CurrentSnapshot.VersionNumber;

@@ -1,5 +1,4 @@
-﻿using EnvDTE;
-using EnvDTE80;
+﻿using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -10,71 +9,130 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace TaskRunnerExtension {
 
 	[Export(typeof(ITaskRunnerOutputListener))]
 	[Name("TaskRunnerExtension.TaskOutputListener")]
-	[Order(Before = "Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoles")]
-	public class TaskOutputListener : ITaskRunnerOutputListener, IVsSolutionEvents {
+	[Order(After = "Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoles")]
+	public class TaskOutputListener : ITaskRunnerOutputListener {
 
 		private readonly Regex _colorRegex;
 		private readonly IEnumerable<Regex> _errorMatchRegexes;
 		private readonly DTE2 _dte;
-		private readonly Events _events;
-		private readonly BuildEvents _buildEvents;
-		private readonly IVsSolution _vsSolution;
+		private Dictionary<string, (Guid paneId, IVsOutputWindowPane pane)> _taskPanes = new Dictionary<string, (Guid paneId, IVsOutputWindowPane pane)>(StringComparer.Ordinal);
 		private readonly OutputErrorsFactory _factory;
-		private IErrorListProvider _errorProvider;
-		private IVsOutputWindowPane _generalPane;
-		private bool _isFirstLine = true;
+		private readonly IErrorListProvider _errorProvider;
+		private readonly EnvDTE.Events _events;
+		private readonly EnvDTE.SolutionEvents _solutionEvents;
 
 		[ImportingConstructor]
 		internal TaskOutputListener(IErrorListProvider errorProvider) {
 
 			ThreadHelper.ThrowIfNotOnUIThread();
 
-			_dte = (DTE2)Package.GetGlobalService(typeof(DTE));
+			_dte = (DTE2)Package.GetGlobalService(typeof(EnvDTE.DTE));
 			_colorRegex = new Regex(@"\u001b\[\d+m");
 			_errorMatchRegexes = new List<Regex> {
-								new Regex(@"^(?<file>([a-z]:)[^:]+): line (?<line>[0-9]+), col (?<column>[0-9]+), (?<severity>[\w]+) - (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
-								new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w]*)[\s]+(?<category>\w[\w]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
-								new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w\s]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
-						};
-
-			_errorProvider = errorProvider;
-			_factory = new OutputErrorsFactory(_errorProvider);
-
-			uint solutionEventsCookie;
-			_vsSolution = (IVsSolution)ServiceProvider.GlobalProvider.GetService(typeof(SVsSolution));
-			_vsSolution.AdviseSolutionEvents(this, out solutionEventsCookie);
+				new Regex(@"^(?<file>([a-z]:)[^:]+): line (?<line>[0-9]+), col (?<column>[0-9]+), (?<severity>[\w]+) - (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+				new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w]*)[\s]+(?<category>\w[\w]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+				new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w\s]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+			};
 
 			_events = _dte.Events;
-			_buildEvents = _events.BuildEvents;
-			_buildEvents.OnBuildBegin += BuildBegin;
-			_buildEvents.OnBuildDone += BuildDone;
+			_solutionEvents = _events.SolutionEvents;
+			_solutionEvents.BeforeClosing += _solutionEvents_BeforeClosing;
+
+			_errorProvider = errorProvider;
+
+			_factory = new OutputErrorsFactory(_errorProvider);
+
+			// ataches the Factory to the error provider
+			_errorProvider.AddErrorListFactory(_factory);
+
+			var hostAssembly = typeof(ITaskRunnerOutputListener).Assembly.GetName(false);
+			var taskRunnerAssembly = "Microsoft.WebTools.TaskRunnerExplorer, Version=" + hostAssembly.Version + ", Culture=neutral, PublicKeyToken=" + GetHexadecimalString(hostAssembly.GetPublicKeyToken(), false);
+			Type t = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerExplorerVsPackage, " + taskRunnerAssembly, true);
+			var instanceProperty = t.GetProperty("Instance", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+			var taskRunnerManagerProperty = t.GetProperty("TaskRunnerManager", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+			var instance = instanceProperty.GetValue(null);
+			var taskRunnerManager = taskRunnerManagerProperty.GetValue(instance);
+			var consolesProperty = taskRunnerManager.GetType().GetProperty("Consoles", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+			var consoles = consolesProperty.GetValue(taskRunnerManager);
+			var consolesType = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.ITaskRunnerConsoles, " + taskRunnerAssembly, true);
+			var consoleAddedEvent = consolesType.GetEvent("ConsoleAdded");
+			//var consoleRemovedEvent = consolesType.GetEvent("ConsoleRemoved");
+
+			var taskRunnerConsoleAddedEventArgs = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoleAddedEventArgs, " + taskRunnerAssembly, true);
+			//var taskRunnerConsoleRemovedEventArgs = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoleRemovedEventArgs, " + taskRunnerAssembly, true);
+
+			var p1 = Expression.Parameter(typeof(EventArgs), "p1");
+			var callMethod = Expression.Call(Expression.Convert(p1, taskRunnerConsoleAddedEventArgs), taskRunnerConsoleAddedEventArgs.GetProperty("Console", BindingFlags.Instance | BindingFlags.Public).GetMethod);
+			_taskRunnerConsoleAddedEventArgsGetConsole = Expression.Lambda<Func<EventArgs, object>>(callMethod, p1).Compile();
+
+			//p1 = Expression.Parameter(typeof(EventArgs), "p1");
+			//callMethod = Expression.Call(Expression.Convert(p1, taskRunnerConsoleRemovedEventArgs), taskRunnerConsoleRemovedEventArgs.GetProperty("Console", BindingFlags.Instance | BindingFlags.Public).GetMethod);
+			//_taskRunnerConsoleRemovedEventArgsGetConsole = Expression.Lambda<Func<EventArgs, object>>(callMethod, p1).Compile();
+
+			var consoleType = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.ITaskRunnerConsole, " + taskRunnerAssembly, true);
+			var consoleTask = consoleType.GetProperty("Task", BindingFlags.Instance | BindingFlags.Public);
+			p1 = Expression.Parameter(typeof(object), "p1");
+			callMethod = Expression.Call(Expression.Convert(p1, consoleType), consoleTask.GetMethod);
+			_getTask = Expression.Lambda<Func<object, ITaskRunnerNode>>(callMethod, p1).Compile();
+
+			//var stateChangedEventArgs = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoleStateChangedEventArgs, " + taskRunnerAssembly, true);
+			//_stateChangedEvent = consoleType.GetEvent("StateChanged");
+
+			//p1 = Expression.Parameter(typeof(EventArgs), "p1");
+			//callMethod = Expression.Call(Expression.Convert(p1, stateChangedEventArgs), stateChangedEventArgs.GetProperty("Console", BindingFlags.Instance | BindingFlags.Public).GetMethod);
+			//_taskRunnerConsoleStateChangedEventArgsGetConsole = Expression.Lambda<Func<EventArgs, object>>(callMethod, p1).Compile();
+
+			//p1 = Expression.Parameter(typeof(EventArgs), "p1");
+			//callMethod = Expression.Call(Expression.Convert(p1, stateChangedEventArgs), stateChangedEventArgs.GetProperty("State", BindingFlags.Instance | BindingFlags.Public).GetMethod);
+			//_taskRunnerConsoleStateChangedEventArgsGetState = Expression.Lambda<Func<EventArgs, int>>(Expression.Convert(callMethod, typeof(int)), p1).Compile();
+
+			consoleAddedEvent.AddEventHandler(consoles, Delegate.CreateDelegate(typeof(EventHandler<>).MakeGenericType(taskRunnerConsoleAddedEventArgs), this, typeof(TaskOutputListener).GetMethod("OnConsoleAdded", BindingFlags.Instance | BindingFlags.NonPublic)));
+			//consoleRemovedEvent.AddEventHandler(consoles, Delegate.CreateDelegate(typeof(EventHandler<>).MakeGenericType(taskRunnerConsoleRemovedEventArgs), this, typeof(TaskOutputListener).GetMethod("OnConsoleRemoved", BindingFlags.Instance | BindingFlags.NonPublic)));
+			//_onStateChanged = Delegate.CreateDelegate(typeof(EventHandler<>).MakeGenericType(stateChangedEventArgs), this, typeof(TaskOutputListener).GetMethod("OnStateChanged", BindingFlags.Instance | BindingFlags.NonPublic));
+		}
+
+		private void _solutionEvents_BeforeClosing() {
+			ThreadHelper.ThrowIfNotOnUIThread();
+
+			var paneIds = _taskPanes.Select(z => z.Value.paneId).ToList();
+			_taskPanes.Clear();
 
 			IVsOutputWindow outWindow = (IVsOutputWindow)Package.GetGlobalService(typeof(SVsOutputWindow));
-			Guid generalPaneGuid = VSConstants.GUID_OutWindowGeneralPane;
-			outWindow.GetPane(ref generalPaneGuid, out _generalPane);
-			if (_generalPane == null) {
-				outWindow.CreatePane(ref generalPaneGuid, "TaskRunnerExtension", 1, 1);
-				outWindow.GetPane(ref generalPaneGuid, out _generalPane);
+
+			foreach (var paneId in paneIds) {
+				Guid currentPaneId = paneId;
+				outWindow.DeletePane(ref currentPaneId);
 			}
-
-			Initialize();
 		}
 
-		private void BuildDone(vsBuildScope Scope, vsBuildAction Action) {
-			_isFirstLine = true;
+		private Func<EventArgs, object> _taskRunnerConsoleAddedEventArgsGetConsole;
+		private Func<object, ITaskRunnerNode> _getTask;
+
+		private void OnConsoleAdded(object sender, EventArgs e) {
+
+			var console = _taskRunnerConsoleAddedEventArgsGetConsole(e);
+			var task = _getTask(console);
+			//_stateChangedEvent.AddEventHandler(console, _onStateChanged);
+
+			EnsureTaskPane(task.Name, true);
+			_factory.ClearErrors(task);
+
+			return;
 		}
 
-		private void BuildBegin(vsBuildScope Scope, vsBuildAction Action) {
-			ThreadHelper.ThrowIfNotOnUIThread();
-			_isFirstLine = true;
-			_generalPane.Clear();
-			RemoveErrors();
+		private static string GetHexadecimalString(IEnumerable<byte> data, bool upperCase) {
+			string format = (upperCase ? "X2" : "x2");
+			return data.Aggregate(new StringBuilder(),
+				(sb, v) => sb.Append(v.ToString(format))).ToString();
 		}
 
 		internal void UpdateErrorsList() {
@@ -83,18 +141,40 @@ namespace TaskRunnerExtension {
 			_errorProvider.UpdateAllSinks(_factory);
 		}
 
-		public void Initialize() {
-			// ataches the Factory to the error provider
-			_errorProvider.AddErrorListFactory(_factory);
+		public void RemoveErrors(string taskName) {
+			_factory.ClearErrors();
 		}
 
-		public void RemoveErrors() {
-			_factory.ClearErrors();
+		private IVsOutputWindowPane EnsureTaskPane(string taskName, bool clear) {
+			if (!_taskPanes.TryGetValue(taskName, out var paneInfo)) {
+				ThreadHelper.JoinableTaskFactory.Run(async () => {
+					await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+					IVsOutputWindow outWindow = (IVsOutputWindow)Package.GetGlobalService(typeof(SVsOutputWindow));
+					Guid paneGuid = Guid.NewGuid();
+					IVsOutputWindowPane pane;
+					outWindow.GetPane(ref paneGuid, out pane);
+					if (pane == null) {
+						outWindow.CreatePane(ref paneGuid, "TaskRunnerExtension - " + taskName, 1, 1);
+						outWindow.GetPane(ref paneGuid, out pane);
+					}
+					_taskPanes.Add(taskName, (paneGuid, pane));
+					pane.Activate();
+				});
+			}
+			else if (clear) {
+				ThreadHelper.JoinableTaskFactory.Run(async () => {
+					await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+					paneInfo.pane.Clear();
+					paneInfo.pane.Activate();
+				});
+			}
+			return paneInfo.pane;
 		}
 
 		public IEnumerable<string> HandleLines(ITaskRunnerNode task, string projectName, IEnumerable<string> lines) {
 
 			var currentTaskName = task.Name;
+			var pane = EnsureTaskPane(currentTaskName, false);
 
 			var errorList = new List<IErrorListItem>();
 			foreach (var line in lines) {
@@ -103,7 +183,10 @@ namespace TaskRunnerExtension {
 				var singleLine = cleanLine.Replace("\r\n", string.Empty);
 				if (string.Equals("cancel-build", singleLine, StringComparison.Ordinal)) {
 					_dte.ExecuteCommand("Build.Cancel");
-					_generalPane.OutputStringThreadSafe("Build cancellation requested by task: " + currentTaskName);
+					ThreadHelper.JoinableTaskFactory.Run(async () => {
+						await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+						pane.OutputString("Build cancellation requested");
+					});
 					break;
 				}
 
@@ -119,16 +202,11 @@ namespace TaskRunnerExtension {
 					break;
 				}
 
-				if (_isFirstLine) {
-					ThreadHelper.JoinableTaskFactory.Run(async () => {
-						await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-						_generalPane.Activate();
-					});
-					_isFirstLine = false;
-				}
-
 				// copy line to custom output pane
-				_generalPane.OutputStringThreadSafe(line);
+				ThreadHelper.JoinableTaskFactory.Run(async () => {
+					await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+					pane.OutputString(line);
+				});
 			}
 
 			OutputErrorSnapshot currentSnapshot = _factory.CurrentSnapshot as OutputErrorSnapshot;
@@ -203,48 +281,6 @@ namespace TaskRunnerExtension {
 			}
 
 			_factory.Dispose();
-		}
-
-		int IVsSolutionEvents.OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnQueryCloseProject(IVsHierarchy pHierarchy, int fRemoving, ref int pfCancel) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnBeforeCloseProject(IVsHierarchy pHierarchy, int fRemoved) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnAfterLoadProject(IVsHierarchy pStubHierarchy, IVsHierarchy pRealHierarchy) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnQueryUnloadProject(IVsHierarchy pRealHierarchy, ref int pfCancel) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnBeforeUnloadProject(IVsHierarchy pRealHierarchy, IVsHierarchy pStubHierarchy) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnAfterOpenSolution(object pUnkReserved, int fNewSolution) {
-			//Initialize();
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnQueryCloseSolution(object pUnkReserved, ref int pfCancel) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnBeforeCloseSolution(object pUnkReserved) {
-			return VSConstants.S_OK;
-		}
-
-		int IVsSolutionEvents.OnAfterCloseSolution(object pUnkReserved) {
-			RemoveErrors();
-			return VSConstants.S_OK;
 		}
 	}
 }
