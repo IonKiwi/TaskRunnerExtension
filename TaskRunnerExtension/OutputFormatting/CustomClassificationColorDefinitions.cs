@@ -13,7 +13,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color00")]
-		internal static ClassificationTypeDefinition outputTermColor00Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor00Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color00")]
@@ -26,7 +26,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor00")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor00Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor00Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor00")]
@@ -39,7 +39,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color01")]
-		internal static ClassificationTypeDefinition outputTermColor01Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor01Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color01")]
@@ -52,7 +52,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor01")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor01Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor01Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor01")]
@@ -65,7 +65,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color02")]
-		internal static ClassificationTypeDefinition outputTermColor02Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor02Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color02")]
@@ -78,7 +78,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor02")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor02Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor02Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor02")]
@@ -91,7 +91,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color03")]
-		internal static ClassificationTypeDefinition outputTermColor03Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor03Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color03")]
@@ -104,7 +104,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor03")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor03Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor03Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor03")]
@@ -117,7 +117,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color04")]
-		internal static ClassificationTypeDefinition outputTermColor04Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor04Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color04")]
@@ -130,7 +130,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor04")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor04Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor04Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor04")]
@@ -143,7 +143,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color05")]
-		internal static ClassificationTypeDefinition outputTermColor05Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor05Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color05")]
@@ -156,7 +156,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor05")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor05Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor05Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor05")]
@@ -169,7 +169,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color06")]
-		internal static ClassificationTypeDefinition outputTermColor06Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor06Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color06")]
@@ -182,7 +182,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor06")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor06Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor06Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor06")]
@@ -195,7 +195,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color07")]
-		internal static ClassificationTypeDefinition outputTermColor07Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor07Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color07")]
@@ -208,7 +208,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor07")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor07Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor07Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor07")]
@@ -221,7 +221,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color08")]
-		internal static ClassificationTypeDefinition outputTermColor08Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor08Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color08")]
@@ -234,7 +234,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor08")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor08Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor08Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor08")]
@@ -247,7 +247,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color09")]
-		internal static ClassificationTypeDefinition outputTermColor09Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor09Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color09")]
@@ -260,7 +260,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor09")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor09Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor09Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor09")]
@@ -273,7 +273,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color10")]
-		internal static ClassificationTypeDefinition outputTermColor10Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor10Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color10")]
@@ -286,7 +286,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor10")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor10Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor10Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor10")]
@@ -299,7 +299,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color11")]
-		internal static ClassificationTypeDefinition outputTermColor11Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor11Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color11")]
@@ -312,7 +312,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor11")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor11Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor11Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor11")]
@@ -325,7 +325,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color12")]
-		internal static ClassificationTypeDefinition outputTermColor12Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor12Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color12")]
@@ -338,7 +338,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor12")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor12Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor12Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor12")]
@@ -351,7 +351,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color13")]
-		internal static ClassificationTypeDefinition outputTermColor13Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor13Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color13")]
@@ -364,7 +364,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor13")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor13Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor13Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor13")]
@@ -377,7 +377,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color14")]
-		internal static ClassificationTypeDefinition outputTermColor14Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor14Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color14")]
@@ -390,7 +390,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor14")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor14Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor14Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor14")]
@@ -403,7 +403,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color15")]
-		internal static ClassificationTypeDefinition outputTermColor15Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor15Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color15")]
@@ -416,7 +416,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor15")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor15Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor15Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor15")]
@@ -429,7 +429,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color16")]
-		internal static ClassificationTypeDefinition outputTermColor16Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor16Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color16")]
@@ -442,7 +442,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor16")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor16Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor16Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor16")]
@@ -455,7 +455,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color17")]
-		internal static ClassificationTypeDefinition outputTermColor17Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor17Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color17")]
@@ -468,7 +468,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor17")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor17Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor17Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor17")]
@@ -481,7 +481,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color18")]
-		internal static ClassificationTypeDefinition outputTermColor18Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor18Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color18")]
@@ -494,7 +494,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor18")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor18Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor18Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor18")]
@@ -507,7 +507,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color19")]
-		internal static ClassificationTypeDefinition outputTermColor19Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor19Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color19")]
@@ -520,7 +520,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor19")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor19Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor19Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor19")]
@@ -533,7 +533,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color20")]
-		internal static ClassificationTypeDefinition outputTermColor20Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor20Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color20")]
@@ -546,7 +546,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor20")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor20Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor20Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor20")]
@@ -559,7 +559,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color21")]
-		internal static ClassificationTypeDefinition outputTermColor21Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor21Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color21")]
@@ -572,7 +572,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor21")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor21Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor21Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor21")]
@@ -585,7 +585,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color22")]
-		internal static ClassificationTypeDefinition outputTermColor22Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor22Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color22")]
@@ -598,7 +598,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor22")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor22Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor22Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor22")]
@@ -611,7 +611,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color23")]
-		internal static ClassificationTypeDefinition outputTermColor23Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor23Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color23")]
@@ -624,7 +624,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor23")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor23Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor23Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor23")]
@@ -637,7 +637,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color24")]
-		internal static ClassificationTypeDefinition outputTermColor24Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor24Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color24")]
@@ -650,7 +650,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor24")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor24Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor24Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor24")]
@@ -663,7 +663,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color25")]
-		internal static ClassificationTypeDefinition outputTermColor25Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor25Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color25")]
@@ -676,7 +676,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor25")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor25Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor25Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor25")]
@@ -689,7 +689,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color26")]
-		internal static ClassificationTypeDefinition outputTermColor26Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor26Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color26")]
@@ -702,7 +702,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor26")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor26Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor26Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor26")]
@@ -715,7 +715,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color27")]
-		internal static ClassificationTypeDefinition outputTermColor27Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor27Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color27")]
@@ -728,7 +728,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor27")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor27Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor27Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor27")]
@@ -741,7 +741,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color28")]
-		internal static ClassificationTypeDefinition outputTermColor28Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor28Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color28")]
@@ -754,7 +754,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor28")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor28Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor28Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor28")]
@@ -767,7 +767,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color29")]
-		internal static ClassificationTypeDefinition outputTermColor29Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor29Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color29")]
@@ -780,7 +780,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor29")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor29Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor29Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor29")]
@@ -793,7 +793,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color30")]
-		internal static ClassificationTypeDefinition outputTermColor30Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor30Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color30")]
@@ -806,7 +806,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor30")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor30Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor30Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor30")]
@@ -819,7 +819,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color31")]
-		internal static ClassificationTypeDefinition outputTermColor31Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor31Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color31")]
@@ -832,7 +832,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor31")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor31Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor31Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor31")]
@@ -845,7 +845,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color32")]
-		internal static ClassificationTypeDefinition outputTermColor32Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor32Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color32")]
@@ -858,7 +858,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor32")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor32Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor32Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor32")]
@@ -871,7 +871,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color33")]
-		internal static ClassificationTypeDefinition outputTermColor33Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor33Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color33")]
@@ -884,7 +884,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor33")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor33Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor33Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor33")]
@@ -897,7 +897,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color34")]
-		internal static ClassificationTypeDefinition outputTermColor34Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor34Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color34")]
@@ -910,7 +910,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor34")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor34Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor34Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor34")]
@@ -923,7 +923,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color35")]
-		internal static ClassificationTypeDefinition outputTermColor35Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor35Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color35")]
@@ -936,7 +936,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor35")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor35Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor35Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor35")]
@@ -949,7 +949,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color36")]
-		internal static ClassificationTypeDefinition outputTermColor36Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor36Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color36")]
@@ -962,7 +962,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor36")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor36Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor36Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor36")]
@@ -975,7 +975,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color37")]
-		internal static ClassificationTypeDefinition outputTermColor37Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor37Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color37")]
@@ -988,7 +988,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor37")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor37Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor37Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor37")]
@@ -1001,7 +1001,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color38")]
-		internal static ClassificationTypeDefinition outputTermColor38Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor38Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color38")]
@@ -1014,7 +1014,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor38")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor38Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor38Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor38")]
@@ -1027,7 +1027,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color39")]
-		internal static ClassificationTypeDefinition outputTermColor39Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor39Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color39")]
@@ -1040,7 +1040,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor39")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor39Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor39Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor39")]
@@ -1053,7 +1053,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color40")]
-		internal static ClassificationTypeDefinition outputTermColor40Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor40Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color40")]
@@ -1066,7 +1066,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor40")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor40Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor40Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor40")]
@@ -1079,7 +1079,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color41")]
-		internal static ClassificationTypeDefinition outputTermColor41Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor41Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color41")]
@@ -1092,7 +1092,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor41")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor41Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor41Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor41")]
@@ -1105,7 +1105,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color42")]
-		internal static ClassificationTypeDefinition outputTermColor42Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor42Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color42")]
@@ -1118,7 +1118,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor42")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor42Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor42Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor42")]
@@ -1131,7 +1131,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color43")]
-		internal static ClassificationTypeDefinition outputTermColor43Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor43Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color43")]
@@ -1144,7 +1144,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor43")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor43Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor43Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor43")]
@@ -1157,7 +1157,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color44")]
-		internal static ClassificationTypeDefinition outputTermColor44Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor44Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color44")]
@@ -1170,7 +1170,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor44")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor44Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor44Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor44")]
@@ -1183,7 +1183,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color45")]
-		internal static ClassificationTypeDefinition outputTermColor45Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor45Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color45")]
@@ -1196,7 +1196,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor45")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor45Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor45Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor45")]
@@ -1209,7 +1209,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color46")]
-		internal static ClassificationTypeDefinition outputTermColor46Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor46Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color46")]
@@ -1222,7 +1222,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor46")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor46Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor46Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor46")]
@@ -1235,7 +1235,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color47")]
-		internal static ClassificationTypeDefinition outputTermColor47Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor47Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color47")]
@@ -1248,7 +1248,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor47")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor47Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor47Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor47")]
@@ -1261,7 +1261,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color48")]
-		internal static ClassificationTypeDefinition outputTermColor48Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor48Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color48")]
@@ -1274,7 +1274,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor48")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor48Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor48Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor48")]
@@ -1287,7 +1287,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color49")]
-		internal static ClassificationTypeDefinition outputTermColor49Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor49Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color49")]
@@ -1300,7 +1300,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor49")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor49Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor49Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor49")]
@@ -1313,7 +1313,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color50")]
-		internal static ClassificationTypeDefinition outputTermColor50Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor50Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color50")]
@@ -1326,7 +1326,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor50")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor50Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor50Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor50")]
@@ -1339,7 +1339,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color51")]
-		internal static ClassificationTypeDefinition outputTermColor51Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor51Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color51")]
@@ -1352,7 +1352,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor51")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor51Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor51Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor51")]
@@ -1365,7 +1365,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color52")]
-		internal static ClassificationTypeDefinition outputTermColor52Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor52Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color52")]
@@ -1378,7 +1378,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor52")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor52Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor52Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor52")]
@@ -1391,7 +1391,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color53")]
-		internal static ClassificationTypeDefinition outputTermColor53Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor53Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color53")]
@@ -1404,7 +1404,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor53")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor53Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor53Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor53")]
@@ -1417,7 +1417,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color54")]
-		internal static ClassificationTypeDefinition outputTermColor54Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor54Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color54")]
@@ -1430,7 +1430,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor54")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor54Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor54Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor54")]
@@ -1443,7 +1443,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color55")]
-		internal static ClassificationTypeDefinition outputTermColor55Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor55Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color55")]
@@ -1456,7 +1456,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor55")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor55Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor55Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor55")]
@@ -1469,7 +1469,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color56")]
-		internal static ClassificationTypeDefinition outputTermColor56Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor56Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color56")]
@@ -1482,7 +1482,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor56")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor56Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor56Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor56")]
@@ -1495,7 +1495,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color57")]
-		internal static ClassificationTypeDefinition outputTermColor57Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor57Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color57")]
@@ -1508,7 +1508,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor57")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor57Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor57Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor57")]
@@ -1521,7 +1521,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color58")]
-		internal static ClassificationTypeDefinition outputTermColor58Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor58Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color58")]
@@ -1534,7 +1534,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor58")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor58Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor58Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor58")]
@@ -1547,7 +1547,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color59")]
-		internal static ClassificationTypeDefinition outputTermColor59Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor59Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color59")]
@@ -1560,7 +1560,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor59")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor59Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor59Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor59")]
@@ -1573,7 +1573,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color60")]
-		internal static ClassificationTypeDefinition outputTermColor60Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor60Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color60")]
@@ -1586,7 +1586,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor60")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor60Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor60Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor60")]
@@ -1599,7 +1599,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color61")]
-		internal static ClassificationTypeDefinition outputTermColor61Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor61Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color61")]
@@ -1612,7 +1612,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor61")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor61Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor61Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor61")]
@@ -1625,7 +1625,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color62")]
-		internal static ClassificationTypeDefinition outputTermColor62Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor62Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color62")]
@@ -1638,7 +1638,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor62")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor62Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor62Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor62")]
@@ -1651,7 +1651,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color63")]
-		internal static ClassificationTypeDefinition outputTermColor63Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor63Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color63")]
@@ -1664,7 +1664,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor63")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor63Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor63Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor63")]
@@ -1677,7 +1677,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color64")]
-		internal static ClassificationTypeDefinition outputTermColor64Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor64Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color64")]
@@ -1690,7 +1690,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor64")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor64Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor64Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor64")]
@@ -1703,7 +1703,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color65")]
-		internal static ClassificationTypeDefinition outputTermColor65Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor65Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color65")]
@@ -1716,7 +1716,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor65")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor65Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor65Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor65")]
@@ -1729,7 +1729,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color66")]
-		internal static ClassificationTypeDefinition outputTermColor66Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor66Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color66")]
@@ -1742,7 +1742,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor66")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor66Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor66Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor66")]
@@ -1755,7 +1755,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color67")]
-		internal static ClassificationTypeDefinition outputTermColor67Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor67Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color67")]
@@ -1768,7 +1768,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor67")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor67Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor67Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor67")]
@@ -1781,7 +1781,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color68")]
-		internal static ClassificationTypeDefinition outputTermColor68Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor68Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color68")]
@@ -1794,7 +1794,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor68")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor68Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor68Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor68")]
@@ -1807,7 +1807,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color69")]
-		internal static ClassificationTypeDefinition outputTermColor69Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor69Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color69")]
@@ -1820,7 +1820,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor69")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor69Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor69Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor69")]
@@ -1833,7 +1833,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color70")]
-		internal static ClassificationTypeDefinition outputTermColor70Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor70Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color70")]
@@ -1846,7 +1846,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor70")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor70Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor70Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor70")]
@@ -1859,7 +1859,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color71")]
-		internal static ClassificationTypeDefinition outputTermColor71Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor71Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color71")]
@@ -1872,7 +1872,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor71")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor71Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor71Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor71")]
@@ -1885,7 +1885,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color72")]
-		internal static ClassificationTypeDefinition outputTermColor72Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor72Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color72")]
@@ -1898,7 +1898,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor72")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor72Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor72Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor72")]
@@ -1911,7 +1911,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color73")]
-		internal static ClassificationTypeDefinition outputTermColor73Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor73Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color73")]
@@ -1924,7 +1924,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor73")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor73Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor73Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor73")]
@@ -1937,7 +1937,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color74")]
-		internal static ClassificationTypeDefinition outputTermColor74Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor74Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color74")]
@@ -1950,7 +1950,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor74")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor74Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor74Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor74")]
@@ -1963,7 +1963,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color75")]
-		internal static ClassificationTypeDefinition outputTermColor75Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor75Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color75")]
@@ -1976,7 +1976,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor75")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor75Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor75Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor75")]
@@ -1989,7 +1989,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color76")]
-		internal static ClassificationTypeDefinition outputTermColor76Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor76Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color76")]
@@ -2002,7 +2002,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor76")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor76Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor76Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor76")]
@@ -2015,7 +2015,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color77")]
-		internal static ClassificationTypeDefinition outputTermColor77Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor77Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color77")]
@@ -2028,7 +2028,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor77")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor77Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor77Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor77")]
@@ -2041,7 +2041,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color78")]
-		internal static ClassificationTypeDefinition outputTermColor78Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor78Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color78")]
@@ -2054,7 +2054,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor78")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor78Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor78Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor78")]
@@ -2067,7 +2067,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color79")]
-		internal static ClassificationTypeDefinition outputTermColor79Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor79Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color79")]
@@ -2080,7 +2080,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor79")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor79Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor79Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor79")]
@@ -2093,7 +2093,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color80")]
-		internal static ClassificationTypeDefinition outputTermColor80Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor80Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color80")]
@@ -2106,7 +2106,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor80")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor80Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor80Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor80")]
@@ -2119,7 +2119,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color81")]
-		internal static ClassificationTypeDefinition outputTermColor81Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor81Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color81")]
@@ -2132,7 +2132,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor81")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor81Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor81Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor81")]
@@ -2145,7 +2145,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color82")]
-		internal static ClassificationTypeDefinition outputTermColor82Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor82Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color82")]
@@ -2158,7 +2158,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor82")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor82Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor82Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor82")]
@@ -2171,7 +2171,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color83")]
-		internal static ClassificationTypeDefinition outputTermColor83Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor83Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color83")]
@@ -2184,7 +2184,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor83")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor83Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor83Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor83")]
@@ -2197,7 +2197,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color84")]
-		internal static ClassificationTypeDefinition outputTermColor84Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor84Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color84")]
@@ -2210,7 +2210,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor84")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor84Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor84Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor84")]
@@ -2223,7 +2223,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color85")]
-		internal static ClassificationTypeDefinition outputTermColor85Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor85Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color85")]
@@ -2236,7 +2236,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor85")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor85Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor85Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor85")]
@@ -2249,7 +2249,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color86")]
-		internal static ClassificationTypeDefinition outputTermColor86Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor86Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color86")]
@@ -2262,7 +2262,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor86")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor86Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor86Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor86")]
@@ -2275,7 +2275,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color87")]
-		internal static ClassificationTypeDefinition outputTermColor87Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor87Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color87")]
@@ -2288,7 +2288,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor87")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor87Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor87Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor87")]
@@ -2301,7 +2301,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color88")]
-		internal static ClassificationTypeDefinition outputTermColor88Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor88Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color88")]
@@ -2314,7 +2314,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor88")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor88Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor88Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor88")]
@@ -2327,7 +2327,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color89")]
-		internal static ClassificationTypeDefinition outputTermColor89Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor89Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color89")]
@@ -2340,7 +2340,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor89")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor89Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor89Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor89")]
@@ -2353,7 +2353,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color90")]
-		internal static ClassificationTypeDefinition outputTermColor90Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor90Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color90")]
@@ -2366,7 +2366,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor90")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor90Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor90Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor90")]
@@ -2379,7 +2379,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color91")]
-		internal static ClassificationTypeDefinition outputTermColor91Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor91Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color91")]
@@ -2392,7 +2392,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor91")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor91Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor91Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor91")]
@@ -2405,7 +2405,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color92")]
-		internal static ClassificationTypeDefinition outputTermColor92Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor92Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color92")]
@@ -2418,7 +2418,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor92")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor92Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor92Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor92")]
@@ -2431,7 +2431,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color93")]
-		internal static ClassificationTypeDefinition outputTermColor93Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor93Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color93")]
@@ -2444,7 +2444,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor93")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor93Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor93Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor93")]
@@ -2457,7 +2457,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color94")]
-		internal static ClassificationTypeDefinition outputTermColor94Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor94Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color94")]
@@ -2470,7 +2470,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor94")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor94Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor94Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor94")]
@@ -2483,7 +2483,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color95")]
-		internal static ClassificationTypeDefinition outputTermColor95Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor95Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color95")]
@@ -2496,7 +2496,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor95")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor95Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor95Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor95")]
@@ -2509,7 +2509,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color96")]
-		internal static ClassificationTypeDefinition outputTermColor96Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor96Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color96")]
@@ -2522,7 +2522,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor96")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor96Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor96Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor96")]
@@ -2535,7 +2535,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color97")]
-		internal static ClassificationTypeDefinition outputTermColor97Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor97Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color97")]
@@ -2548,7 +2548,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor97")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor97Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor97Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor97")]
@@ -2561,7 +2561,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color98")]
-		internal static ClassificationTypeDefinition outputTermColor98Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor98Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color98")]
@@ -2574,7 +2574,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor98")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor98Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor98Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor98")]
@@ -2587,7 +2587,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color99")]
-		internal static ClassificationTypeDefinition outputTermColor99Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor99Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color99")]
@@ -2600,7 +2600,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor99")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor99Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor99Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor99")]
@@ -2613,7 +2613,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color100")]
-		internal static ClassificationTypeDefinition outputTermColor100Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor100Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color100")]
@@ -2626,7 +2626,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor100")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor100Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor100Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor100")]
@@ -2639,7 +2639,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color101")]
-		internal static ClassificationTypeDefinition outputTermColor101Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor101Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color101")]
@@ -2652,7 +2652,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor101")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor101Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor101Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor101")]
@@ -2665,7 +2665,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color102")]
-		internal static ClassificationTypeDefinition outputTermColor102Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor102Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color102")]
@@ -2678,7 +2678,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor102")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor102Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor102Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor102")]
@@ -2691,7 +2691,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color103")]
-		internal static ClassificationTypeDefinition outputTermColor103Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor103Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color103")]
@@ -2704,7 +2704,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor103")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor103Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor103Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor103")]
@@ -2717,7 +2717,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color104")]
-		internal static ClassificationTypeDefinition outputTermColor104Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor104Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color104")]
@@ -2730,7 +2730,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor104")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor104Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor104Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor104")]
@@ -2743,7 +2743,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color105")]
-		internal static ClassificationTypeDefinition outputTermColor105Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor105Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color105")]
@@ -2756,7 +2756,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor105")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor105Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor105Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor105")]
@@ -2769,7 +2769,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color106")]
-		internal static ClassificationTypeDefinition outputTermColor106Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor106Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color106")]
@@ -2782,7 +2782,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor106")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor106Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor106Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor106")]
@@ -2795,7 +2795,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color107")]
-		internal static ClassificationTypeDefinition outputTermColor107Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor107Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color107")]
@@ -2808,7 +2808,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor107")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor107Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor107Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor107")]
@@ -2821,7 +2821,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color108")]
-		internal static ClassificationTypeDefinition outputTermColor108Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor108Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color108")]
@@ -2834,7 +2834,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor108")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor108Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor108Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor108")]
@@ -2847,7 +2847,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color109")]
-		internal static ClassificationTypeDefinition outputTermColor109Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor109Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color109")]
@@ -2860,7 +2860,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor109")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor109Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor109Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor109")]
@@ -2873,7 +2873,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color110")]
-		internal static ClassificationTypeDefinition outputTermColor110Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor110Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color110")]
@@ -2886,7 +2886,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor110")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor110Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor110Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor110")]
@@ -2899,7 +2899,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color111")]
-		internal static ClassificationTypeDefinition outputTermColor111Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor111Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color111")]
@@ -2912,7 +2912,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor111")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor111Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor111Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor111")]
@@ -2925,7 +2925,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color112")]
-		internal static ClassificationTypeDefinition outputTermColor112Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor112Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color112")]
@@ -2938,7 +2938,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor112")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor112Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor112Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor112")]
@@ -2951,7 +2951,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color113")]
-		internal static ClassificationTypeDefinition outputTermColor113Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor113Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color113")]
@@ -2964,7 +2964,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor113")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor113Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor113Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor113")]
@@ -2977,7 +2977,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color114")]
-		internal static ClassificationTypeDefinition outputTermColor114Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor114Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color114")]
@@ -2990,7 +2990,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor114")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor114Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor114Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor114")]
@@ -3003,7 +3003,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color115")]
-		internal static ClassificationTypeDefinition outputTermColor115Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor115Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color115")]
@@ -3016,7 +3016,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor115")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor115Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor115Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor115")]
@@ -3029,7 +3029,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color116")]
-		internal static ClassificationTypeDefinition outputTermColor116Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor116Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color116")]
@@ -3042,7 +3042,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor116")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor116Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor116Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor116")]
@@ -3055,7 +3055,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color117")]
-		internal static ClassificationTypeDefinition outputTermColor117Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor117Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color117")]
@@ -3068,7 +3068,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor117")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor117Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor117Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor117")]
@@ -3081,7 +3081,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color118")]
-		internal static ClassificationTypeDefinition outputTermColor118Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor118Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color118")]
@@ -3094,7 +3094,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor118")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor118Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor118Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor118")]
@@ -3107,7 +3107,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color119")]
-		internal static ClassificationTypeDefinition outputTermColor119Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor119Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color119")]
@@ -3120,7 +3120,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor119")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor119Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor119Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor119")]
@@ -3133,7 +3133,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color120")]
-		internal static ClassificationTypeDefinition outputTermColor120Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor120Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color120")]
@@ -3146,7 +3146,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor120")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor120Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor120Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor120")]
@@ -3159,7 +3159,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color121")]
-		internal static ClassificationTypeDefinition outputTermColor121Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor121Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color121")]
@@ -3172,7 +3172,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor121")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor121Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor121Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor121")]
@@ -3185,7 +3185,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color122")]
-		internal static ClassificationTypeDefinition outputTermColor122Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor122Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color122")]
@@ -3198,7 +3198,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor122")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor122Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor122Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor122")]
@@ -3211,7 +3211,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color123")]
-		internal static ClassificationTypeDefinition outputTermColor123Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor123Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color123")]
@@ -3224,7 +3224,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor123")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor123Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor123Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor123")]
@@ -3237,7 +3237,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color124")]
-		internal static ClassificationTypeDefinition outputTermColor124Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor124Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color124")]
@@ -3250,7 +3250,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor124")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor124Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor124Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor124")]
@@ -3263,7 +3263,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color125")]
-		internal static ClassificationTypeDefinition outputTermColor125Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor125Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color125")]
@@ -3276,7 +3276,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor125")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor125Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor125Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor125")]
@@ -3289,7 +3289,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color126")]
-		internal static ClassificationTypeDefinition outputTermColor126Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor126Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color126")]
@@ -3302,7 +3302,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor126")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor126Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor126Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor126")]
@@ -3315,7 +3315,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color127")]
-		internal static ClassificationTypeDefinition outputTermColor127Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor127Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color127")]
@@ -3328,7 +3328,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor127")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor127Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor127Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor127")]
@@ -3341,7 +3341,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color128")]
-		internal static ClassificationTypeDefinition outputTermColor128Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor128Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color128")]
@@ -3354,7 +3354,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor128")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor128Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor128Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor128")]
@@ -3367,7 +3367,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color129")]
-		internal static ClassificationTypeDefinition outputTermColor129Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor129Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color129")]
@@ -3380,7 +3380,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor129")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor129Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor129Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor129")]
@@ -3393,7 +3393,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color130")]
-		internal static ClassificationTypeDefinition outputTermColor130Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor130Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color130")]
@@ -3406,7 +3406,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor130")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor130Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor130Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor130")]
@@ -3419,7 +3419,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color131")]
-		internal static ClassificationTypeDefinition outputTermColor131Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor131Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color131")]
@@ -3432,7 +3432,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor131")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor131Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor131Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor131")]
@@ -3445,7 +3445,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color132")]
-		internal static ClassificationTypeDefinition outputTermColor132Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor132Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color132")]
@@ -3458,7 +3458,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor132")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor132Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor132Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor132")]
@@ -3471,7 +3471,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color133")]
-		internal static ClassificationTypeDefinition outputTermColor133Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor133Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color133")]
@@ -3484,7 +3484,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor133")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor133Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor133Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor133")]
@@ -3497,7 +3497,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color134")]
-		internal static ClassificationTypeDefinition outputTermColor134Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor134Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color134")]
@@ -3510,7 +3510,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor134")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor134Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor134Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor134")]
@@ -3523,7 +3523,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color135")]
-		internal static ClassificationTypeDefinition outputTermColor135Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor135Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color135")]
@@ -3536,7 +3536,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor135")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor135Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor135Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor135")]
@@ -3549,7 +3549,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color136")]
-		internal static ClassificationTypeDefinition outputTermColor136Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor136Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color136")]
@@ -3562,7 +3562,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor136")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor136Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor136Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor136")]
@@ -3575,7 +3575,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color137")]
-		internal static ClassificationTypeDefinition outputTermColor137Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor137Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color137")]
@@ -3588,7 +3588,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor137")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor137Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor137Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor137")]
@@ -3601,7 +3601,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color138")]
-		internal static ClassificationTypeDefinition outputTermColor138Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor138Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color138")]
@@ -3614,7 +3614,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor138")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor138Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor138Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor138")]
@@ -3627,7 +3627,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color139")]
-		internal static ClassificationTypeDefinition outputTermColor139Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor139Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color139")]
@@ -3640,7 +3640,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor139")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor139Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor139Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor139")]
@@ -3653,7 +3653,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color140")]
-		internal static ClassificationTypeDefinition outputTermColor140Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor140Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color140")]
@@ -3666,7 +3666,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor140")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor140Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor140Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor140")]
@@ -3679,7 +3679,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color141")]
-		internal static ClassificationTypeDefinition outputTermColor141Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor141Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color141")]
@@ -3692,7 +3692,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor141")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor141Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor141Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor141")]
@@ -3705,7 +3705,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color142")]
-		internal static ClassificationTypeDefinition outputTermColor142Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor142Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color142")]
@@ -3718,7 +3718,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor142")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor142Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor142Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor142")]
@@ -3731,7 +3731,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color143")]
-		internal static ClassificationTypeDefinition outputTermColor143Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor143Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color143")]
@@ -3744,7 +3744,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor143")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor143Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor143Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor143")]
@@ -3757,7 +3757,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color144")]
-		internal static ClassificationTypeDefinition outputTermColor144Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor144Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color144")]
@@ -3770,7 +3770,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor144")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor144Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor144Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor144")]
@@ -3783,7 +3783,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color145")]
-		internal static ClassificationTypeDefinition outputTermColor145Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor145Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color145")]
@@ -3796,7 +3796,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor145")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor145Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor145Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor145")]
@@ -3809,7 +3809,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color146")]
-		internal static ClassificationTypeDefinition outputTermColor146Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor146Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color146")]
@@ -3822,7 +3822,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor146")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor146Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor146Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor146")]
@@ -3835,7 +3835,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color147")]
-		internal static ClassificationTypeDefinition outputTermColor147Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor147Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color147")]
@@ -3848,7 +3848,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor147")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor147Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor147Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor147")]
@@ -3861,7 +3861,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color148")]
-		internal static ClassificationTypeDefinition outputTermColor148Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor148Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color148")]
@@ -3874,7 +3874,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor148")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor148Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor148Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor148")]
@@ -3887,7 +3887,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color149")]
-		internal static ClassificationTypeDefinition outputTermColor149Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor149Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color149")]
@@ -3900,7 +3900,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor149")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor149Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor149Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor149")]
@@ -3913,7 +3913,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color150")]
-		internal static ClassificationTypeDefinition outputTermColor150Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor150Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color150")]
@@ -3926,7 +3926,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor150")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor150Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor150Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor150")]
@@ -3939,7 +3939,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color151")]
-		internal static ClassificationTypeDefinition outputTermColor151Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor151Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color151")]
@@ -3952,7 +3952,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor151")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor151Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor151Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor151")]
@@ -3965,7 +3965,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color152")]
-		internal static ClassificationTypeDefinition outputTermColor152Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor152Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color152")]
@@ -3978,7 +3978,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor152")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor152Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor152Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor152")]
@@ -3991,7 +3991,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color153")]
-		internal static ClassificationTypeDefinition outputTermColor153Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor153Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color153")]
@@ -4004,7 +4004,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor153")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor153Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor153Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor153")]
@@ -4017,7 +4017,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color154")]
-		internal static ClassificationTypeDefinition outputTermColor154Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor154Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color154")]
@@ -4030,7 +4030,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor154")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor154Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor154Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor154")]
@@ -4043,7 +4043,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color155")]
-		internal static ClassificationTypeDefinition outputTermColor155Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor155Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color155")]
@@ -4056,7 +4056,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor155")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor155Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor155Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor155")]
@@ -4069,7 +4069,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color156")]
-		internal static ClassificationTypeDefinition outputTermColor156Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor156Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color156")]
@@ -4082,7 +4082,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor156")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor156Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor156Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor156")]
@@ -4095,7 +4095,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color157")]
-		internal static ClassificationTypeDefinition outputTermColor157Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor157Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color157")]
@@ -4108,7 +4108,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor157")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor157Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor157Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor157")]
@@ -4121,7 +4121,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color158")]
-		internal static ClassificationTypeDefinition outputTermColor158Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor158Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color158")]
@@ -4134,7 +4134,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor158")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor158Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor158Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor158")]
@@ -4147,7 +4147,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color159")]
-		internal static ClassificationTypeDefinition outputTermColor159Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor159Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color159")]
@@ -4160,7 +4160,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor159")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor159Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor159Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor159")]
@@ -4173,7 +4173,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color160")]
-		internal static ClassificationTypeDefinition outputTermColor160Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor160Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color160")]
@@ -4186,7 +4186,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor160")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor160Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor160Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor160")]
@@ -4199,7 +4199,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color161")]
-		internal static ClassificationTypeDefinition outputTermColor161Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor161Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color161")]
@@ -4212,7 +4212,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor161")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor161Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor161Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor161")]
@@ -4225,7 +4225,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color162")]
-		internal static ClassificationTypeDefinition outputTermColor162Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor162Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color162")]
@@ -4238,7 +4238,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor162")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor162Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor162Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor162")]
@@ -4251,7 +4251,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color163")]
-		internal static ClassificationTypeDefinition outputTermColor163Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor163Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color163")]
@@ -4264,7 +4264,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor163")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor163Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor163Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor163")]
@@ -4277,7 +4277,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color164")]
-		internal static ClassificationTypeDefinition outputTermColor164Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor164Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color164")]
@@ -4290,7 +4290,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor164")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor164Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor164Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor164")]
@@ -4303,7 +4303,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color165")]
-		internal static ClassificationTypeDefinition outputTermColor165Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor165Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color165")]
@@ -4316,7 +4316,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor165")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor165Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor165Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor165")]
@@ -4329,7 +4329,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color166")]
-		internal static ClassificationTypeDefinition outputTermColor166Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor166Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color166")]
@@ -4342,7 +4342,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor166")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor166Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor166Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor166")]
@@ -4355,7 +4355,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color167")]
-		internal static ClassificationTypeDefinition outputTermColor167Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor167Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color167")]
@@ -4368,7 +4368,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor167")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor167Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor167Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor167")]
@@ -4381,7 +4381,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color168")]
-		internal static ClassificationTypeDefinition outputTermColor168Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor168Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color168")]
@@ -4394,7 +4394,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor168")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor168Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor168Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor168")]
@@ -4407,7 +4407,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color169")]
-		internal static ClassificationTypeDefinition outputTermColor169Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor169Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color169")]
@@ -4420,7 +4420,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor169")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor169Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor169Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor169")]
@@ -4433,7 +4433,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color170")]
-		internal static ClassificationTypeDefinition outputTermColor170Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor170Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color170")]
@@ -4446,7 +4446,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor170")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor170Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor170Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor170")]
@@ -4459,7 +4459,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color171")]
-		internal static ClassificationTypeDefinition outputTermColor171Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor171Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color171")]
@@ -4472,7 +4472,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor171")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor171Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor171Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor171")]
@@ -4485,7 +4485,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color172")]
-		internal static ClassificationTypeDefinition outputTermColor172Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor172Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color172")]
@@ -4498,7 +4498,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor172")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor172Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor172Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor172")]
@@ -4511,7 +4511,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color173")]
-		internal static ClassificationTypeDefinition outputTermColor173Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor173Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color173")]
@@ -4524,7 +4524,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor173")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor173Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor173Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor173")]
@@ -4537,7 +4537,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color174")]
-		internal static ClassificationTypeDefinition outputTermColor174Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor174Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color174")]
@@ -4550,7 +4550,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor174")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor174Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor174Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor174")]
@@ -4563,7 +4563,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color175")]
-		internal static ClassificationTypeDefinition outputTermColor175Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor175Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color175")]
@@ -4576,7 +4576,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor175")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor175Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor175Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor175")]
@@ -4589,7 +4589,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color176")]
-		internal static ClassificationTypeDefinition outputTermColor176Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor176Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color176")]
@@ -4602,7 +4602,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor176")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor176Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor176Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor176")]
@@ -4615,7 +4615,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color177")]
-		internal static ClassificationTypeDefinition outputTermColor177Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor177Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color177")]
@@ -4628,7 +4628,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor177")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor177Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor177Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor177")]
@@ -4641,7 +4641,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color178")]
-		internal static ClassificationTypeDefinition outputTermColor178Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor178Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color178")]
@@ -4654,7 +4654,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor178")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor178Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor178Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor178")]
@@ -4667,7 +4667,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color179")]
-		internal static ClassificationTypeDefinition outputTermColor179Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor179Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color179")]
@@ -4680,7 +4680,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor179")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor179Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor179Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor179")]
@@ -4693,7 +4693,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color180")]
-		internal static ClassificationTypeDefinition outputTermColor180Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor180Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color180")]
@@ -4706,7 +4706,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor180")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor180Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor180Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor180")]
@@ -4719,7 +4719,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color181")]
-		internal static ClassificationTypeDefinition outputTermColor181Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor181Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color181")]
@@ -4732,7 +4732,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor181")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor181Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor181Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor181")]
@@ -4745,7 +4745,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color182")]
-		internal static ClassificationTypeDefinition outputTermColor182Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor182Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color182")]
@@ -4758,7 +4758,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor182")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor182Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor182Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor182")]
@@ -4771,7 +4771,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color183")]
-		internal static ClassificationTypeDefinition outputTermColor183Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor183Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color183")]
@@ -4784,7 +4784,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor183")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor183Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor183Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor183")]
@@ -4797,7 +4797,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color184")]
-		internal static ClassificationTypeDefinition outputTermColor184Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor184Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color184")]
@@ -4810,7 +4810,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor184")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor184Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor184Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor184")]
@@ -4823,7 +4823,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color185")]
-		internal static ClassificationTypeDefinition outputTermColor185Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor185Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color185")]
@@ -4836,7 +4836,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor185")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor185Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor185Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor185")]
@@ -4849,7 +4849,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color186")]
-		internal static ClassificationTypeDefinition outputTermColor186Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor186Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color186")]
@@ -4862,7 +4862,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor186")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor186Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor186Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor186")]
@@ -4875,7 +4875,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color187")]
-		internal static ClassificationTypeDefinition outputTermColor187Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor187Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color187")]
@@ -4888,7 +4888,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor187")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor187Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor187Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor187")]
@@ -4901,7 +4901,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color188")]
-		internal static ClassificationTypeDefinition outputTermColor188Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor188Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color188")]
@@ -4914,7 +4914,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor188")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor188Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor188Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor188")]
@@ -4927,7 +4927,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color189")]
-		internal static ClassificationTypeDefinition outputTermColor189Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor189Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color189")]
@@ -4940,7 +4940,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor189")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor189Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor189Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor189")]
@@ -4953,7 +4953,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color190")]
-		internal static ClassificationTypeDefinition outputTermColor190Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor190Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color190")]
@@ -4966,7 +4966,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor190")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor190Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor190Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor190")]
@@ -4979,7 +4979,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color191")]
-		internal static ClassificationTypeDefinition outputTermColor191Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor191Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color191")]
@@ -4992,7 +4992,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor191")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor191Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor191Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor191")]
@@ -5005,7 +5005,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color192")]
-		internal static ClassificationTypeDefinition outputTermColor192Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor192Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color192")]
@@ -5018,7 +5018,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor192")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor192Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor192Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor192")]
@@ -5031,7 +5031,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color193")]
-		internal static ClassificationTypeDefinition outputTermColor193Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor193Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color193")]
@@ -5044,7 +5044,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor193")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor193Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor193Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor193")]
@@ -5057,7 +5057,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color194")]
-		internal static ClassificationTypeDefinition outputTermColor194Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor194Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color194")]
@@ -5070,7 +5070,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor194")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor194Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor194Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor194")]
@@ -5083,7 +5083,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color195")]
-		internal static ClassificationTypeDefinition outputTermColor195Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor195Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color195")]
@@ -5096,7 +5096,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor195")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor195Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor195Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor195")]
@@ -5109,7 +5109,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color196")]
-		internal static ClassificationTypeDefinition outputTermColor196Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor196Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color196")]
@@ -5122,7 +5122,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor196")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor196Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor196Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor196")]
@@ -5135,7 +5135,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color197")]
-		internal static ClassificationTypeDefinition outputTermColor197Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor197Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color197")]
@@ -5148,7 +5148,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor197")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor197Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor197Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor197")]
@@ -5161,7 +5161,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color198")]
-		internal static ClassificationTypeDefinition outputTermColor198Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor198Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color198")]
@@ -5174,7 +5174,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor198")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor198Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor198Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor198")]
@@ -5187,7 +5187,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color199")]
-		internal static ClassificationTypeDefinition outputTermColor199Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor199Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color199")]
@@ -5200,7 +5200,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor199")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor199Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor199Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor199")]
@@ -5213,7 +5213,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color200")]
-		internal static ClassificationTypeDefinition outputTermColor200Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor200Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color200")]
@@ -5226,7 +5226,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor200")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor200Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor200Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor200")]
@@ -5239,7 +5239,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color201")]
-		internal static ClassificationTypeDefinition outputTermColor201Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor201Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color201")]
@@ -5252,7 +5252,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor201")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor201Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor201Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor201")]
@@ -5265,7 +5265,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color202")]
-		internal static ClassificationTypeDefinition outputTermColor202Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor202Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color202")]
@@ -5278,7 +5278,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor202")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor202Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor202Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor202")]
@@ -5291,7 +5291,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color203")]
-		internal static ClassificationTypeDefinition outputTermColor203Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor203Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color203")]
@@ -5304,7 +5304,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor203")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor203Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor203Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor203")]
@@ -5317,7 +5317,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color204")]
-		internal static ClassificationTypeDefinition outputTermColor204Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor204Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color204")]
@@ -5330,7 +5330,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor204")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor204Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor204Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor204")]
@@ -5343,7 +5343,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color205")]
-		internal static ClassificationTypeDefinition outputTermColor205Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor205Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color205")]
@@ -5356,7 +5356,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor205")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor205Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor205Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor205")]
@@ -5369,7 +5369,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color206")]
-		internal static ClassificationTypeDefinition outputTermColor206Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor206Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color206")]
@@ -5382,7 +5382,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor206")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor206Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor206Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor206")]
@@ -5395,7 +5395,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color207")]
-		internal static ClassificationTypeDefinition outputTermColor207Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor207Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color207")]
@@ -5408,7 +5408,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor207")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor207Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor207Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor207")]
@@ -5421,7 +5421,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color208")]
-		internal static ClassificationTypeDefinition outputTermColor208Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor208Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color208")]
@@ -5434,7 +5434,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor208")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor208Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor208Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor208")]
@@ -5447,7 +5447,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color209")]
-		internal static ClassificationTypeDefinition outputTermColor209Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor209Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color209")]
@@ -5460,7 +5460,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor209")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor209Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor209Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor209")]
@@ -5473,7 +5473,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color210")]
-		internal static ClassificationTypeDefinition outputTermColor210Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor210Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color210")]
@@ -5486,7 +5486,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor210")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor210Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor210Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor210")]
@@ -5499,7 +5499,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color211")]
-		internal static ClassificationTypeDefinition outputTermColor211Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor211Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color211")]
@@ -5512,7 +5512,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor211")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor211Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor211Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor211")]
@@ -5525,7 +5525,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color212")]
-		internal static ClassificationTypeDefinition outputTermColor212Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor212Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color212")]
@@ -5538,7 +5538,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor212")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor212Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor212Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor212")]
@@ -5551,7 +5551,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color213")]
-		internal static ClassificationTypeDefinition outputTermColor213Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor213Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color213")]
@@ -5564,7 +5564,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor213")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor213Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor213Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor213")]
@@ -5577,7 +5577,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color214")]
-		internal static ClassificationTypeDefinition outputTermColor214Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor214Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color214")]
@@ -5590,7 +5590,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor214")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor214Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor214Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor214")]
@@ -5603,7 +5603,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color215")]
-		internal static ClassificationTypeDefinition outputTermColor215Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor215Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color215")]
@@ -5616,7 +5616,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor215")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor215Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor215Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor215")]
@@ -5629,7 +5629,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color216")]
-		internal static ClassificationTypeDefinition outputTermColor216Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor216Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color216")]
@@ -5642,7 +5642,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor216")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor216Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor216Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor216")]
@@ -5655,7 +5655,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color217")]
-		internal static ClassificationTypeDefinition outputTermColor217Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor217Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color217")]
@@ -5668,7 +5668,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor217")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor217Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor217Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor217")]
@@ -5681,7 +5681,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color218")]
-		internal static ClassificationTypeDefinition outputTermColor218Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor218Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color218")]
@@ -5694,7 +5694,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor218")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor218Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor218Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor218")]
@@ -5707,7 +5707,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color219")]
-		internal static ClassificationTypeDefinition outputTermColor219Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor219Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color219")]
@@ -5720,7 +5720,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor219")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor219Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor219Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor219")]
@@ -5733,7 +5733,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color220")]
-		internal static ClassificationTypeDefinition outputTermColor220Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor220Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color220")]
@@ -5746,7 +5746,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor220")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor220Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor220Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor220")]
@@ -5759,7 +5759,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color221")]
-		internal static ClassificationTypeDefinition outputTermColor221Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor221Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color221")]
@@ -5772,7 +5772,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor221")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor221Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor221Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor221")]
@@ -5785,7 +5785,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color222")]
-		internal static ClassificationTypeDefinition outputTermColor222Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor222Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color222")]
@@ -5798,7 +5798,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor222")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor222Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor222Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor222")]
@@ -5811,7 +5811,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color223")]
-		internal static ClassificationTypeDefinition outputTermColor223Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor223Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color223")]
@@ -5824,7 +5824,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor223")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor223Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor223Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor223")]
@@ -5837,7 +5837,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color224")]
-		internal static ClassificationTypeDefinition outputTermColor224Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor224Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color224")]
@@ -5850,7 +5850,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor224")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor224Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor224Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor224")]
@@ -5863,7 +5863,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color225")]
-		internal static ClassificationTypeDefinition outputTermColor225Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor225Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color225")]
@@ -5876,7 +5876,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor225")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor225Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor225Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor225")]
@@ -5889,7 +5889,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color226")]
-		internal static ClassificationTypeDefinition outputTermColor226Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor226Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color226")]
@@ -5902,7 +5902,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor226")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor226Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor226Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor226")]
@@ -5915,7 +5915,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color227")]
-		internal static ClassificationTypeDefinition outputTermColor227Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor227Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color227")]
@@ -5928,7 +5928,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor227")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor227Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor227Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor227")]
@@ -5941,7 +5941,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color228")]
-		internal static ClassificationTypeDefinition outputTermColor228Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor228Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color228")]
@@ -5954,7 +5954,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor228")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor228Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor228Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor228")]
@@ -5967,7 +5967,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color229")]
-		internal static ClassificationTypeDefinition outputTermColor229Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor229Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color229")]
@@ -5980,7 +5980,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor229")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor229Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor229Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor229")]
@@ -5993,7 +5993,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color230")]
-		internal static ClassificationTypeDefinition outputTermColor230Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor230Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color230")]
@@ -6006,7 +6006,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor230")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor230Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor230Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor230")]
@@ -6019,7 +6019,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color231")]
-		internal static ClassificationTypeDefinition outputTermColor231Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor231Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color231")]
@@ -6032,7 +6032,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor231")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor231Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor231Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor231")]
@@ -6045,7 +6045,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color232")]
-		internal static ClassificationTypeDefinition outputTermColor232Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor232Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color232")]
@@ -6058,7 +6058,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor232")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor232Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor232Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor232")]
@@ -6071,7 +6071,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color233")]
-		internal static ClassificationTypeDefinition outputTermColor233Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor233Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color233")]
@@ -6084,7 +6084,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor233")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor233Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor233Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor233")]
@@ -6097,7 +6097,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color234")]
-		internal static ClassificationTypeDefinition outputTermColor234Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor234Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color234")]
@@ -6110,7 +6110,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor234")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor234Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor234Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor234")]
@@ -6123,7 +6123,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color235")]
-		internal static ClassificationTypeDefinition outputTermColor235Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor235Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color235")]
@@ -6136,7 +6136,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor235")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor235Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor235Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor235")]
@@ -6149,7 +6149,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color236")]
-		internal static ClassificationTypeDefinition outputTermColor236Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor236Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color236")]
@@ -6162,7 +6162,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor236")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor236Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor236Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor236")]
@@ -6175,7 +6175,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color237")]
-		internal static ClassificationTypeDefinition outputTermColor237Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor237Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color237")]
@@ -6188,7 +6188,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor237")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor237Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor237Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor237")]
@@ -6201,7 +6201,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color238")]
-		internal static ClassificationTypeDefinition outputTermColor238Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor238Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color238")]
@@ -6214,7 +6214,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor238")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor238Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor238Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor238")]
@@ -6227,7 +6227,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color239")]
-		internal static ClassificationTypeDefinition outputTermColor239Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor239Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color239")]
@@ -6240,7 +6240,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor239")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor239Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor239Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor239")]
@@ -6253,7 +6253,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color240")]
-		internal static ClassificationTypeDefinition outputTermColor240Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor240Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color240")]
@@ -6266,7 +6266,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor240")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor240Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor240Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor240")]
@@ -6279,7 +6279,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color241")]
-		internal static ClassificationTypeDefinition outputTermColor241Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor241Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color241")]
@@ -6292,7 +6292,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor241")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor241Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor241Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor241")]
@@ -6305,7 +6305,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color242")]
-		internal static ClassificationTypeDefinition outputTermColor242Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor242Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color242")]
@@ -6318,7 +6318,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor242")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor242Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor242Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor242")]
@@ -6331,7 +6331,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color243")]
-		internal static ClassificationTypeDefinition outputTermColor243Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor243Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color243")]
@@ -6344,7 +6344,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor243")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor243Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor243Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor243")]
@@ -6357,7 +6357,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color244")]
-		internal static ClassificationTypeDefinition outputTermColor244Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor244Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color244")]
@@ -6370,7 +6370,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor244")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor244Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor244Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor244")]
@@ -6383,7 +6383,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color245")]
-		internal static ClassificationTypeDefinition outputTermColor245Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor245Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color245")]
@@ -6396,7 +6396,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor245")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor245Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor245Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor245")]
@@ -6409,7 +6409,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color246")]
-		internal static ClassificationTypeDefinition outputTermColor246Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor246Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color246")]
@@ -6422,7 +6422,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor246")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor246Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor246Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor246")]
@@ -6435,7 +6435,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color247")]
-		internal static ClassificationTypeDefinition outputTermColor247Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor247Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color247")]
@@ -6448,7 +6448,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor247")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor247Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor247Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor247")]
@@ -6461,7 +6461,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color248")]
-		internal static ClassificationTypeDefinition outputTermColor248Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor248Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color248")]
@@ -6474,7 +6474,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor248")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor248Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor248Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor248")]
@@ -6487,7 +6487,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color249")]
-		internal static ClassificationTypeDefinition outputTermColor249Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor249Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color249")]
@@ -6500,7 +6500,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor249")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor249Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor249Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor249")]
@@ -6513,7 +6513,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color250")]
-		internal static ClassificationTypeDefinition outputTermColor250Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor250Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color250")]
@@ -6526,7 +6526,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor250")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor250Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor250Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor250")]
@@ -6539,7 +6539,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color251")]
-		internal static ClassificationTypeDefinition outputTermColor251Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor251Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color251")]
@@ -6552,7 +6552,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor251")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor251Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor251Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor251")]
@@ -6565,7 +6565,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color252")]
-		internal static ClassificationTypeDefinition outputTermColor252Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor252Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color252")]
@@ -6578,7 +6578,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor252")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor252Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor252Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor252")]
@@ -6591,7 +6591,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color253")]
-		internal static ClassificationTypeDefinition outputTermColor253Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor253Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color253")]
@@ -6604,7 +6604,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor253")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor253Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor253Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor253")]
@@ -6617,7 +6617,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color254")]
-		internal static ClassificationTypeDefinition outputTermColor254Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor254Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color254")]
@@ -6630,7 +6630,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor254")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor254Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor254Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor254")]
@@ -6643,7 +6643,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.color255")]
-		internal static ClassificationTypeDefinition outputTermColor255Definition = null;
+		internal static ClassificationTypeDefinition outputTermColor255Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.color255")]
@@ -6656,7 +6656,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.bgcolor255")]
-		internal static ClassificationTypeDefinition outputTermBackgroundColor255Definition = null;
+		internal static ClassificationTypeDefinition outputTermBackgroundColor255Definition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.bgcolor255")]
@@ -6667,5 +6667,4 @@ namespace TaskRunnerExtension.OutputFormatting {
 			}
 		}
 	}
-
 }

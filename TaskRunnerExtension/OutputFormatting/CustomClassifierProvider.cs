@@ -14,10 +14,10 @@ namespace TaskRunnerExtension.OutputFormatting {
 	internal class CustomClassifierProvider : IClassifierProvider {
 
 		[Import]
-		internal IClassificationTypeRegistryService ClassificationRegistry = null;
+		internal IClassificationTypeRegistryService ClassificationRegistry { get; set; }
 
 		[Import]
-		internal IClassificationFormatMapService ClassificationFormatMapService = null;
+		internal IClassificationFormatMapService ClassificationFormatMapService { get; set; }
 
 		private static CustomClassifier _diffClassifier;
 

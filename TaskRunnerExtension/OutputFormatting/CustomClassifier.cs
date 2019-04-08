@@ -5,9 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Text;
-using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Utilities;
-using System.Windows.Media;
 
 namespace TaskRunnerExtension.OutputFormatting {
 	public class CustomClassifier : IClassifier {
@@ -47,7 +45,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 				c1 = text.IndexOf("\u001b["); // '\x001b'
 				if (c1 >= 0) {
-					handleMarker:
+				handleMarker:
 					c3 = text.IndexOf("m", c1);
 					if (c3 < 0) {
 						// invalid or unexpected escape sequence

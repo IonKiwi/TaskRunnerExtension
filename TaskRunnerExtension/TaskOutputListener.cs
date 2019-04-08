@@ -15,8 +15,8 @@ using System.Text.RegularExpressions;
 namespace TaskRunnerExtension {
 
 	[Export(typeof(ITaskRunnerOutputListener))]
-	[Name("TaskRunnerExtension.ErrorListOutputListener")]
-	[Order(Before = "Microsoft.VisualStudio.TaskRunnerExplorer.TaskRunnerConsoles")]
+	[Name("TaskRunnerExtension.TaskOutputListener")]
+	[Order(Before = "Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoles")]
 	public class TaskOutputListener : ITaskRunnerOutputListener, IVsSolutionEvents {
 
 		private readonly Regex _colorRegex;
@@ -27,17 +27,21 @@ namespace TaskRunnerExtension {
 		private readonly IVsSolution _vsSolution;
 		private readonly OutputErrorsFactory _factory;
 		private IErrorListProvider _errorProvider;
-		private bool _isFirstLine;
+		private IVsOutputWindowPane _generalPane;
+		private bool _isFirstLine = true;
 
 		[ImportingConstructor]
 		internal TaskOutputListener(IErrorListProvider errorProvider) {
+
+			ThreadHelper.ThrowIfNotOnUIThread();
+
 			_dte = (DTE2)Package.GetGlobalService(typeof(DTE));
 			_colorRegex = new Regex(@"\u001b\[\d+m");
 			_errorMatchRegexes = new List<Regex> {
-				new Regex(@"^(?<file>([a-z]:)[^:]+): line (?<line>[0-9]+), col (?<column>[0-9]+), (?<severity>[\w]+) - (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
-				new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w]*)[\s]+(?<category>\w[\w]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
-				new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w\s]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
-			};
+								new Regex(@"^(?<file>([a-z]:)[^:]+): line (?<line>[0-9]+), col (?<column>[0-9]+), (?<severity>[\w]+) - (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+								new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w]*)[\s]+(?<category>\w[\w]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+								new Regex(@"^(?<file>.+)\((?<line>[0-9]+),(?<column>[0-9]+)\): (?<severity>\w[\w\s]*): (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+						};
 
 			_errorProvider = errorProvider;
 			_factory = new OutputErrorsFactory(_errorProvider);
@@ -51,6 +55,14 @@ namespace TaskRunnerExtension {
 			_buildEvents.OnBuildBegin += BuildBegin;
 			_buildEvents.OnBuildDone += BuildDone;
 
+			IVsOutputWindow outWindow = (IVsOutputWindow)Package.GetGlobalService(typeof(SVsOutputWindow));
+			Guid generalPaneGuid = VSConstants.GUID_OutWindowGeneralPane;
+			outWindow.GetPane(ref generalPaneGuid, out _generalPane);
+			if (_generalPane == null) {
+				outWindow.CreatePane(ref generalPaneGuid, "TaskRunnerExtension", 1, 1);
+				outWindow.GetPane(ref generalPaneGuid, out _generalPane);
+			}
+
 			Initialize();
 		}
 
@@ -59,7 +71,9 @@ namespace TaskRunnerExtension {
 		}
 
 		private void BuildBegin(vsBuildScope Scope, vsBuildAction Action) {
+			ThreadHelper.ThrowIfNotOnUIThread();
 			_isFirstLine = true;
+			_generalPane.Clear();
 			RemoveErrors();
 		}
 
@@ -78,35 +92,18 @@ namespace TaskRunnerExtension {
 			_factory.ClearErrors();
 		}
 
-		private void ShowMessage(string message) {
-			IVsOutputWindow outWindow = (IVsOutputWindow)Package.GetGlobalService(typeof(SVsOutputWindow));
-			Guid generalPaneGuid = VSConstants.GUID_OutWindowGeneralPane;
-			IVsOutputWindowPane generalPane;
-			outWindow.GetPane(ref generalPaneGuid, out generalPane);
-			if (generalPane == null) {
-				outWindow.CreatePane(ref generalPaneGuid, "TaskRunnerExtension", 1, 1);
-				outWindow.GetPane(ref generalPaneGuid, out generalPane);
-			}
-			if (_isFirstLine) {
-				generalPane.Clear();
-				_isFirstLine = false;
-			}
-			generalPane.OutputString(message);
-			generalPane.Activate();
-		}
-
 		public IEnumerable<string> HandleLines(ITaskRunnerNode task, string projectName, IEnumerable<string> lines) {
+
 			var currentTaskName = task.Name;
 
 			var errorList = new List<IErrorListItem>();
 			foreach (var line in lines) {
+
 				var cleanLine = _colorRegex.Replace(line, string.Empty);
 				var singleLine = cleanLine.Replace("\r\n", string.Empty);
 				if (string.Equals("cancel-build", singleLine, StringComparison.Ordinal)) {
-					if (_dte.Solution.SolutionBuild.BuildState == vsBuildState.vsBuildStateInProgress) {
-						_dte.ExecuteCommand("Build.Cancel");
-					}
-					ShowMessage("Build cancellation requested by task: " + currentTaskName);
+					_dte.ExecuteCommand("Build.Cancel");
+					_generalPane.OutputStringThreadSafe("Build cancellation requested by task: " + currentTaskName);
 					break;
 				}
 
@@ -121,8 +118,17 @@ namespace TaskRunnerExtension {
 					errorList.Add(descriptor);
 					break;
 				}
+
+				if (_isFirstLine) {
+					ThreadHelper.JoinableTaskFactory.Run(async () => {
+						await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+						_generalPane.Activate();
+					});
+					_isFirstLine = false;
+				}
+
 				// copy line to custom output pane
-				ShowMessage(line);
+				_generalPane.OutputStringThreadSafe(line);
 			}
 
 			OutputErrorSnapshot currentSnapshot = _factory.CurrentSnapshot as OutputErrorSnapshot;
@@ -171,9 +177,9 @@ namespace TaskRunnerExtension {
 		}
 
 		private static List<IErrorListItem> RemoveErrorDuplicates(ITaskRunnerNode task,
-																																string projectName,
-																																List<IErrorListItem> errorList,
-																																OutputErrorSnapshot currentSnapshot) {
+				string projectName,
+				List<IErrorListItem> errorList,
+				OutputErrorSnapshot currentSnapshot) {
 			List<IErrorListItem> newErrors = new List<IErrorListItem>();
 
 			foreach (IErrorListItem error in errorList) {

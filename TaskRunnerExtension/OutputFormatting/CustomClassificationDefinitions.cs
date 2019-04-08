@@ -13,7 +13,7 @@ namespace TaskRunnerExtension.OutputFormatting {
 
 		[Export]
 		[Name("output.term.colorcode")]
-		internal static ClassificationTypeDefinition outputTermColorCodeDefinition = null;
+		internal static ClassificationTypeDefinition OutputTermColorCodeDefinition { get; set; }
 
 		[Export(typeof(EditorFormatDefinition))]
 		[ClassificationType(ClassificationTypeNames = "output.term.colorcode")]
