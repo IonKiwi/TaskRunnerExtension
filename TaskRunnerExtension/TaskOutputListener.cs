@@ -183,10 +183,10 @@ namespace TaskRunnerExtension {
 				var singleLine = cleanLine.Replace("\r\n", string.Empty);
 				if (string.Equals("cancel-build", singleLine, StringComparison.Ordinal)) {
 					_dte.ExecuteCommand("Build.Cancel");
-					ThreadHelper.JoinableTaskFactory.Run(async () => {
-						await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-						pane.OutputString("Build cancellation requested");
-					});
+#pragma warning disable VSTHRD010
+					// copy line to custom output pane
+					pane.OutputStringThreadSafe("Build cancellation requested");
+#pragma warning restore VSTHRD010
 					break;
 				}
 
@@ -202,11 +202,10 @@ namespace TaskRunnerExtension {
 					break;
 				}
 
+#pragma warning disable VSTHRD010
 				// copy line to custom output pane
-				ThreadHelper.JoinableTaskFactory.Run(async () => {
-					await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-					pane.OutputString(line);
-				});
+				pane.OutputStringThreadSafe(line);
+#pragma warning restore VSTHRD010
 			}
 
 			OutputErrorSnapshot currentSnapshot = _factory.CurrentSnapshot as OutputErrorSnapshot;
