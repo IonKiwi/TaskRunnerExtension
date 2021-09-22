@@ -1,8 +1,10 @@
-﻿using EnvDTE80;
+﻿extern alias taskrunner;
+
+using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TaskRunnerExplorer;
+using taskrunner::Microsoft.VisualStudio.TaskRunnerExplorer;
 using Microsoft.VisualStudio.Utilities;
 using System;
 using System.Collections.Generic;
@@ -54,7 +56,7 @@ namespace TaskRunnerExtension {
 			// ataches the Factory to the error provider
 			_errorProvider.AddErrorListFactory(_factory);
 
-			var hostAssembly = typeof(ITaskRunnerOutputListener).Assembly.GetName(false);
+			var hostAssembly = typeof(taskrunner::Microsoft.VisualStudio.TaskRunnerExplorer.ITaskRunnerOutputListener).Assembly.GetName(false);
 			var taskRunnerAssembly = "Microsoft.WebTools.TaskRunnerExplorer, Version=" + hostAssembly.Version + ", Culture=neutral, PublicKeyToken=" + GetHexadecimalString(hostAssembly.GetPublicKeyToken(), false);
 			Type t = Type.GetType("Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerExplorerVsPackage, " + taskRunnerAssembly, true);
 			var instanceProperty = t.GetProperty("Instance", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);

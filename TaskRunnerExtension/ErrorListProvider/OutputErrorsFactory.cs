@@ -1,7 +1,9 @@
-﻿using Microsoft.VisualStudio.Shell.TableManager;
+﻿extern alias taskrunner;
+
+using Microsoft.VisualStudio.Shell.TableManager;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TaskRunnerExplorer;
+using taskrunner::Microsoft.VisualStudio.TaskRunnerExplorer;
 
 namespace TaskRunnerExtension {
 	/// <summary>

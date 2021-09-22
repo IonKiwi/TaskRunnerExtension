@@ -1,5 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TaskRunnerExplorer;
+﻿extern alias taskrunner;
+
+using System;
+using taskrunner::Microsoft.VisualStudio.TaskRunnerExplorer;
 using System.Text;
 
 namespace TaskRunnerExtension {
