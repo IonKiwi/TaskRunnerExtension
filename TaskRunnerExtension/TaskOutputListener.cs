@@ -23,10 +23,12 @@ namespace TaskRunnerExtension {
 	[Order(After = "Microsoft.WebTools.TaskRunnerExplorer.TaskRunnerConsoles")]
 	public class TaskOutputListener : ITaskRunnerOutputListener {
 
+		private readonly object _lock = new object();
+		private readonly TaskRunnerExtensionPackage _package;
 		private readonly Regex _colorRegex;
 		private readonly IEnumerable<Regex> _errorMatchRegexes;
 		private readonly DTE2 _dte;
-		private Dictionary<string, (Guid paneId, IVsOutputWindowPane pane)> _taskPanes = new Dictionary<string, (Guid paneId, IVsOutputWindowPane pane)>(StringComparer.Ordinal);
+		private Dictionary<string, (Guid paneId, IVsOutputWindowPane pane, bool clear)> _taskPanes = new Dictionary<string, (Guid paneId, IVsOutputWindowPane pane, bool clear)>(StringComparer.Ordinal);
 		private readonly OutputErrorsFactory _factory;
 		private readonly IErrorListProvider _errorProvider;
 		private readonly EnvDTE.Events _events;
@@ -38,6 +40,12 @@ namespace TaskRunnerExtension {
 			ThreadHelper.ThrowIfNotOnUIThread();
 
 			_dte = (DTE2)Package.GetGlobalService(typeof(EnvDTE.DTE));
+			var packageGuid = new Guid(TaskRunnerExtensionPackage.PackageGuidString);
+			if (((IVsShell)Package.GetGlobalService(typeof(IVsShell))).IsPackageLoaded(ref packageGuid, out var package) != VSConstants.S_OK) {
+				throw new InvalidOperationException("TaskRunnerExtensionPackage not loaded");
+			}
+			_package = (TaskRunnerExtensionPackage)package;
+
 			_colorRegex = new Regex(@"\u001b\[\d+m");
 			_errorMatchRegexes = new List<Regex> {
 				new Regex(@"^(?<file>([a-z]:)[^:]+): line (?<line>[0-9]+), col (?<column>[0-9]+), (?<severity>[\w]+) - (?<message>.+)", RegexOptions.IgnoreCase | RegexOptions.Compiled),
@@ -123,9 +131,14 @@ namespace TaskRunnerExtension {
 
 			var console = _taskRunnerConsoleAddedEventArgsGetConsole(e);
 			var task = _getTask(console);
+			var currentTaskName = task.Name;
 			//_stateChangedEvent.AddEventHandler(console, _onStateChanged);
 
-			EnsureTaskPane(task.Name, true);
+			lock (_lock) {
+				if (_taskPanes.TryGetValue(currentTaskName, out var paneInfo)) {
+					_taskPanes[currentTaskName] = (paneInfo.paneId, paneInfo.pane, true);
+				}
+			}
 			_factory.ClearErrors(task);
 
 			return;
@@ -143,83 +156,74 @@ namespace TaskRunnerExtension {
 			_errorProvider.UpdateAllSinks(_factory);
 		}
 
-		public void RemoveErrors(string taskName) {
-			_factory.ClearErrors();
-		}
-
-		private IVsOutputWindowPane EnsureTaskPane(string taskName, bool clear) {
-			if (!_taskPanes.TryGetValue(taskName, out var paneInfo)) {
-				ThreadHelper.JoinableTaskFactory.Run(async () => {
-					await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-					IVsOutputWindow outWindow = (IVsOutputWindow)Package.GetGlobalService(typeof(SVsOutputWindow));
-					Guid paneGuid = Guid.NewGuid();
-					IVsOutputWindowPane pane;
-					outWindow.GetPane(ref paneGuid, out pane);
-					if (pane == null) {
-						outWindow.CreatePane(ref paneGuid, "TaskRunnerExtension - " + taskName, 1, 1);
-						outWindow.GetPane(ref paneGuid, out pane);
-					}
-					_taskPanes.Add(taskName, (paneGuid, pane));
-					pane.Activate();
-				});
-			}
-			else if (clear) {
-				ThreadHelper.JoinableTaskFactory.Run(async () => {
-					await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-					paneInfo.pane.Clear();
-					paneInfo.pane.Activate();
-				});
-			}
-			return paneInfo.pane;
-		}
-
 		public IEnumerable<string> HandleLines(ITaskRunnerNode task, string projectName, IEnumerable<string> lines) {
 
 			var currentTaskName = task.Name;
-			var pane = EnsureTaskPane(currentTaskName, false);
+			var lineList = lines.ToList();
 
-			var errorList = new List<IErrorListItem>();
-			foreach (var line in lines) {
+			_package.JoinableTaskFactory.RunAsync(async () => {
 
-				var cleanLine = _colorRegex.Replace(line, string.Empty);
-				var singleLine = cleanLine.Replace("\r\n", string.Empty);
-				if (string.Equals("cancel-build", singleLine, StringComparison.Ordinal)) {
-					_dte.ExecuteCommand("Build.Cancel");
-#pragma warning disable VSTHRD010
-					// copy line to custom output pane
-					pane.OutputStringThreadSafe("Build cancellation requested");
-#pragma warning restore VSTHRD010
-					break;
+				await _package.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+				IVsOutputWindowPane pane;
+				lock (_lock) {
+					if (_taskPanes.TryGetValue(currentTaskName, out var paneInfo)) {
+						if (paneInfo.clear) {
+							paneInfo.pane.Clear();
+							paneInfo.pane.Activate();
+						}
+						pane = paneInfo.pane;
+					}
+					else {
+						IVsOutputWindow outWindow = (IVsOutputWindow)Package.GetGlobalService(typeof(SVsOutputWindow));
+						Guid paneGuid = Guid.NewGuid();
+
+						outWindow.GetPane(ref paneGuid, out pane);
+						if (pane == null) {
+							outWindow.CreatePane(ref paneGuid, "TaskRunnerExtension - " + currentTaskName, 1, 1);
+							outWindow.GetPane(ref paneGuid, out pane);
+						}
+						_taskPanes.Add(currentTaskName, (paneGuid, pane, false));
+						pane.Activate();
+					}
 				}
 
-				foreach (var regex in _errorMatchRegexes) {
-					Match match = regex.Match(singleLine);
-					if (!match.Success) {
-						continue;
+				var errorList = new List<IErrorListItem>();
+				foreach (var line in lines) {
+
+					var cleanLine = _colorRegex.Replace(line, string.Empty);
+					var singleLine = cleanLine.Replace("\r\n", string.Empty);
+					if (string.Equals("cancel-build", singleLine, StringComparison.Ordinal)) {
+						_dte.ExecuteCommand("Build.Cancel");
+						break;
 					}
 
-					var descriptor = GetTaskErrorFromMatch(match);
-					descriptor.ProjectName = projectName;
-					errorList.Add(descriptor);
-					break;
+					foreach (var regex in _errorMatchRegexes) {
+						Match match = regex.Match(singleLine);
+						if (!match.Success) {
+							continue;
+						}
+
+						var descriptor = GetTaskErrorFromMatch(match);
+						descriptor.ProjectName = projectName;
+						errorList.Add(descriptor);
+						break;
+					}
+
+					pane.OutputString(line);
 				}
 
-#pragma warning disable VSTHRD010
-				// copy line to custom output pane
-				pane.OutputStringThreadSafe(line);
-#pragma warning restore VSTHRD010
-			}
+				OutputErrorSnapshot currentSnapshot = _factory.CurrentSnapshot as OutputErrorSnapshot;
+				List<IErrorListItem> newErrors = RemoveErrorDuplicates(task, projectName, errorList, currentSnapshot);
 
-			OutputErrorSnapshot currentSnapshot = _factory.CurrentSnapshot as OutputErrorSnapshot;
-			List<IErrorListItem> newErrors = RemoveErrorDuplicates(task, projectName, errorList, currentSnapshot);
+				if (newErrors.Count > 0) {
+					_factory.AddErrorItems(newErrors);
+					UpdateErrorsList();
+				}
 
-			if (newErrors.Count > 0) {
-				_factory.AddErrorItems(newErrors);
-				UpdateErrorsList();
-			}
+			}).FileAndForget("taskrunnerextension/listener/consoleadded");
 
-			// return the lines for display in the Task Runner Explorer console
-			return lines;
+			return lineList;
 		}
 
 		internal static TaskError GetTaskErrorFromMatch(Match match) {
